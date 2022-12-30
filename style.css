@@ -48,6 +48,7 @@ ul {
   left: 0;
   right: 0;
   z-index: 1000;
+  border-bottom: 1px solid #fff;
 }
 .header .logo,
 .header .nav {
@@ -122,7 +123,7 @@ ul {
 }
 #home {
   margin-top: 2rem;
-  background-color: #24d41b;
+  background-color: rgb(2, 0, 0);
   position: relative;
 }
 #home .container .left {
@@ -134,20 +135,17 @@ ul {
 #home .container .left h1 {
   font-size: 7.5rem;
   color: #fff;
-  animation: fadeInAnimation ease 5s;
+  animation: fadeInAnimation ease 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
 }
 @keyframes fadeInAnimation {
   0% {
     opacity: 0;
   }
-  50% {
-    opacity: 1;
-  }
+
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }
 #home .container .right {
@@ -167,6 +165,14 @@ ul {
   right: 10px;
   bottom: 10px;
 }
+#home .container i {
+  position: absolute;
+  right: 400px;
+  bottom: 10px;
+
+  color: #fff;
+  font-size: 50px;
+}
 
 /* ------------------------home End*/
 /* About css start */
@@ -179,7 +185,6 @@ ul {
   height: 100vh;
   width: 100%;
   gap: 1rem;
-  border: 2px solid green;
 }
 #about .container .left {
   /* width: 30%; */
@@ -188,7 +193,7 @@ ul {
 }
 #about .container .left img {
   width: 100%;
-  height: auto;
+  height: 450px;
 }
 #about .container .right {
   flex-basis: 60%;
@@ -201,10 +206,11 @@ ul {
 }
 /* About css end */
 /* Secvice css Start */
-#service h2 {
-  font-size: 7rem;
+#service h1 {
+  font-size: 3rem;
   font-weight: 700px;
-  padding-left: 1rem;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
 }
 #service .container {
   width: 100%;
@@ -215,6 +221,8 @@ ul {
 }
 #service .container .box1 {
   flex-basis: 30%;
+  height: 400px;
+  overflow-x: auto;
 }
 #service .container .box1:hover {
   transition: all 0.3s;
@@ -222,7 +230,8 @@ ul {
   color: #fff;
 }
 #service .container h1 {
-  margin-bottom: 0.7rem;
+  margin-bottom: 1rem 0;
+  font-size: 1.5rem;
 }
 #service .container div {
   border: 1px solid black;
@@ -261,12 +270,9 @@ ul {
   outline: none;
   border: 1px solid #fff;
   padding: 0.7rem;
+  color: #fff;
 }
-#contact .container .btn {
-  padding: 0.5rem 3rem;
-  background-color: #fff;
-  color: black;
-}
+
 /* Contact css End */
 
 @media (max-width: 991px) {
@@ -332,4 +338,35 @@ ul {
     gap: 1rem;
     flex-direction: column;
   }
+}
+@media (max-width: 400px) {
+  #service h1 {
+    display: inline-block;
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 700px;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+    color: rgb(2, 0, 0);
+  }
+  #about {
+    margin-bottom: 3rem;
+  }
+}
+.input-last-div {
+  width: 100%;
+  text-align: left;
+}
+#contact .container .btn {
+  display: inline-block;
+
+  background-color: #fff;
+  color: black;
+  width: 30%;
+  margin-left: 10%;
+}
+
+section {
+  width: 100%;
+  padding: 2rem 0;
 }

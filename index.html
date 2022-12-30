@@ -6,6 +6,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -39,6 +42,7 @@
         <div class="container">
             <div class="left">
                 <h1>BUSINESS <br> LANDING <br> PAGE</h1>
+                <a href="#service"><i class="fa-solid fa-arrow-down"></i></a>
                 <img src="image/Screenshot (195).png" alt="">
             </div>
 
@@ -62,6 +66,7 @@
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo dignissimos, libero iure maiores
                     doloribus impedit qui? Sunt, animi numquam architecto et soluta fuga, saepe eligendi cum aspernatur,
                     aut ea quae.
+
                 </p>
             </div>
         </div>
@@ -71,28 +76,49 @@
 
     <!-- our services Start -->
     <section id="service">
-        <h2>Our Service</h2>
+        <h1>Our Service</h1>
         <div class="container">
             <div class="box1">
                 <h1>Service 1</h1>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum perspiciatis in sequi,
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus quibusdam modi pariatur
+                    molestias, saepe hic harum omnis numquam maiores laborum.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum perspiciatis in sequi,
+                    iusto corporis ducimus quidem provident fugiat totam excepturi!
+                    amet consectetur adipisicing elit. Rerum perspiciatis in sequi,
                     iusto corporis ducimus quidem provident fugiat totam excepturi!
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum perspiciatis in sequi,
-                    iusto corporis ducimus quidem provident fugiat totam excepturi! </p>
+                    iusto corporis ducimus quidem provident fugiat totam excepturi!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum perspiciatis in sequi,
+                    iusto corporis ducimus quidem provident fugiat totam excepturi!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum</p>
             </div>
             <div class="box1">
                 <h1>Service 2</h1>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus quibusdam modi pariatur
                     molestias, saepe hic harum omnis numquam maiores laborum.
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum perspiciatis in sequi,
-                    iusto corporis ducimus quidem provident fugiat totam excepturi!</p>
+                    iusto corporis ducimus quidem provident fugiat totam excepturi!
+                    amet consectetur adipisicing elit. Rerum perspiciatis in sequi,
+                    iusto corporis ducimus quidem provident fugiat totam excepturi!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum perspiciatis in sequi,
+                    iusto corporis ducimus quidem provident fugiat totam excepturi!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum perspiciatis in sequi,
+                    iusto corporis ducimus quidem provident fugiat totam excepturi!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum</p>
             </div>
             <div class="box1">
                 <h1>Service 3</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nihil architecto
                     rerum ullam at necessitatibus quod commodi, cum eos explicabo.
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum perspiciatis in sequi,
-                    iusto corporis ducimus quidem provident fugiat totam excepturi! </p>
+                    iusto corporis ducimus quidem provident fugiat totam excepturi!
+                    amet consectetur adipisicing elit. Rerum perspiciatis in sequi,
+                    iusto corporis ducimus quidem provident fugiat totam excepturi!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum perspiciatis in sequi,
+                    iusto corporis ducimus quidem provident fugiat totam excepturi!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum perspiciatis in sequi,
+                    iusto corporis ducimus quidem provident fugiat totam excepturi!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum </p>
             </div>
 
         </div>
@@ -105,26 +131,41 @@
             <div>
                 <h2>CONTACT US</h2>
             </div>
-            <div class="input-field">
+            <form action="" class="input-field">
                 <div class="input">
-                    <input type="text" placeholder="Full Name">
+                    <input type="text" id="fname" placeholder="Full Name" required>
                 </div>
                 <div class="input">
-                    <input type="text" placeholder="Last Name">
+                    <input type="text" id="lname" placeholder="Last Name" required>
                 </div>
                 <div class="input">
-                    <input type="text" placeholder="Email Address">
+                    <input type="email" id="email" placeholder="Email Address" required>
                 </div>
                 <div class="input">
-                    <input type="text" placeholder="Reson for contact">
+                    <input type="text" id="reson" placeholder="Reson for contact" required>
                 </div>
-                <button class="btn">Submit</button>
-            </div>
-        </div>
+                <div class="input-last-div">
+                    <input type="submit" value="Submit" class="btn" onclick="formValidation()">
+                </div>
+            </form>
     </section>
     <!-- our conatact end -->
+    <script>
+        function formValidation() {
+            let fname = document.getElementById('fname').value;
+            let lname = document.getElementById('lname').value;
+            let email = document.getElementById('email').value;
+            let reson = document.getElementById('reson').value;
 
+
+            if (fname.length != 0 &&
+                lname.length != 0 && email.length != 0 && reson.length != 0) {
+                alert("From is submitted");
+            }
+        }
+    </script>
 </body>
+
 
 
 </html>
