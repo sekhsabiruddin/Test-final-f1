@@ -13,6 +13,7 @@
 .nav-bar {
   position: relative;
   margin-top: 3rem;
+  width: 100%;
 }
 section {
   margin-bottom: 3rem;
@@ -120,7 +121,8 @@ ul {
   flex-wrap: wrap;
 }
 #home {
-  background-color: #000000;
+  margin-top: 2rem;
+  background-color: #24d41b;
   position: relative;
 }
 #home .container .left {
@@ -313,17 +315,21 @@ ul {
   }
 
   #home .container .left h1 {
-    font-size: 2rem;
+    font-size: 4rem;
     display: inline-block;
   }
   #contact .container h2 {
     font-size: 1rem;
+  }
+  #service h2 {
+    font-size: 2rem;
   }
   #service .container {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 1rem;
     flex-direction: column;
   }
 }
